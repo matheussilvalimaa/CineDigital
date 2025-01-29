@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CineDigital")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0fa4e8a8933816ebc54e0d2abf483cbfde93fa4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CineDigital")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CineDigital")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -31,7 +31,7 @@ services:
         - CONNECTION_STRING=Host=db;Database=CineDb;Username=cineUser;Password=cinePass
         - STRIPE_SECRET_KEY=sk_test_...
         - STRIPE_PUBLISHABLE_KEY=pk_test_...
-        - JWT_SECRET_KEY=SuaChaveSecretaParaJWT
+        - JWT_SECRET_KEY=YourJWTSecretKey
       networks:
         - cine-network
   
