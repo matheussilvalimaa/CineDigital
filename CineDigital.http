@@ -1,0 +1,6 @@
+@CineDigital_HostAddress = http://localhost:5146
+
+GET {{CineDigital_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

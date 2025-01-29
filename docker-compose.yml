@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: cineUser
+      POSTGRES_PASSWORD: cinePass
+      POSTGRES_DB: cinedb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cineUser -d CineDb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    network:
+      - cine-network
+        
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+      ports:
+        - "5001:80"
+        - "5002:443"
+      environment:
+        - CONNECTION_STRING=Host=db;Database=CineDb;Username=cineUser;Password=cinePass
+        - STRIPE_SECRET_KEY=sk_test_...
+        - STRIPE_PUBLISHABLE_KEY=pk_test_...
+        - JWT_SECRET_KEY=YourJWTSecretKey
+      networks:
+        - cine-network
+  
+  volumes:
+    db-data:
+  
+  networks:
+    cine-network:
