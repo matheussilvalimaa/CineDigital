@@ -1,4 +1,4 @@
-# CineDigital
+# 🎥 CineDigital
 
 **CineDigital** is a name that i gave for that robust cinema ticket reservation system that i developed using ASP.NET Core and Entity Framework Core, with PostgreSQL as the database. The application offers comprehensive functionalities for managing users, movies, showtimes, theaters, reservations, and payments integrated with Stripe API.
 
